@@ -66,13 +66,13 @@ import playerLogo from "./video-logo1.png";
         <div className="video-controls">
        <span className="flex items-center">
        <i style={{ color: active === "like" ? "white" : "grey" }}
-        onClick={() =>
-          active !== "like" ? likeDispatch({ type: HANDLE_LIKE }) : null
-      
-          // {  !checkingItem(likedVideos, videoId)
-          // ? dispatch({ type: "ADD_TO_LIKED_VIDEOS", payload: videoDetails })
-          // : null}
+        onClick={() => 
+          // active !== "like" ? likeDispatch({ type: HANDLE_LIKE }) : null
+          !checkingItem(likedVideos, videoId)
+          ? dispatch({ type: "ADD_TO_LIKED_VIDEOS", payload: videoDetails })
+          : null
         }
+        // kisi or treeke se krte h kya??
       class="fa fa-thumbs-up"></i>
        <p className="like-counter">{likes}</p>
        </span>
