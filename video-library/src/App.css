@@ -156,6 +156,7 @@
 
 .home-wrapper-mobile {
   width: 100vw;
+  z-index: 1;
   background: black;
   position: fixed;
   bottom: 0;
@@ -174,7 +175,9 @@
   color: grey;
   font-size: 1.2rem;
 }
-
+.thumbnail-img {
+  width: 100%;
+}
 .main__heading {
   display: block;
   white-space: nowrap;
@@ -193,7 +196,6 @@
     #696969
   ); */
   background-clip: text;
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -262,7 +264,7 @@
 }
 .search-container,
 .search-container-home {
-  width: 350px;
+  width: 30%;
   display: block;
   padding: 2rem;
 }
@@ -327,11 +329,10 @@ input#search-bar-home {
 
 .videos-list-showcase {
   font-family: var(--font-fam);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 2rem 2rem;
-  column-gap: 1em;
-  justify-items: center;
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  justify-content: center;
 }
 
 .designVideoList {
@@ -365,7 +366,7 @@ input#search-bar-home {
 .small-description,
 .small-level {
   position: relative;
-  left: 35px;
+  left: 50px;
   bottom: 5px;
   color: grey;
   font-size: 0.8rem;
@@ -654,4 +655,78 @@ input#search-bar-home {
 .playlistModal-watchLater {
   padding: 5px;
   width: 30%;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 450px) {
+  .main__image {
+    display: none;
+  }
+  .badge {
+    padding: 0px;
+    font-size: 1rem;
+  }
+  .main__heading {
+    padding: 2rem;
+    font-size: 1.4rem;
+  }
+  .home_badge {
+    position: relative;
+    left: 35px;
+    font-size: 0.8rem;
+  }
+  .main__para {
+    font-size: 1rem;
+    width: 40%;
+  }
+  .save_icon_wrapper,
+  .share_icon_wrapper {
+    position: relative;
+    right: 25px;
+  }
+  .play_home_main {
+    display: none;
+    margin: auto;
+  }
+  .play_icon_wrapper {
+    display: block;
+  }
+  .discover_home {
+    text-align: left;
+  }
+  .videos-list-showcase {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: auto;
+    padding: 1rem;
+    opacity: 0.7;
+  }
+  .thumbnail-img {
+    width: 50%;
+  }
+  .video-item {
+    /* padding: 2rem; */
+  }
+  .video-item:hover {
+    box-shadow: none;
+  }
+  .avatar-img {
+    width: 5%;
+  }
+  .video-title {
+    font-size: 1rem;
+    width: 50%;
+  }
+  .designVideoList {
+    display: none;
+  }
+  /* .search-container {
+    width: 100%;
+    align-items: center;
+  } */
+  input#search-bar {
+    width: 100%;
+  }
 }

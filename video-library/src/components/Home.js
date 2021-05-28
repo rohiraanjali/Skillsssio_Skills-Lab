@@ -76,7 +76,6 @@ const Home = () => {
                 key={item.id}
               >
                 <img
-                  style={{ width: "100%" }}
                   className="thumbnail-img"
                   src={item.thumbnail}
                   alt="thumbnail"

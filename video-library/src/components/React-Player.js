@@ -58,7 +58,6 @@ import playerLogo from "./video-logo1.png";
         }
       />
       <div className="player-control">
-   
         <div className="video-description">
         <p className="video-DisplayTitle">{videoDetails.videoTitle}</p>
         <p className="video-views-date">1.4k views •  Nov 20, 2020 {videoDetails.date}</p>
@@ -67,10 +66,10 @@ import playerLogo from "./video-logo1.png";
        <span className="flex items-center">
        <i style={{ color: active === "like" ? "white" : "grey" }}
         onClick={() => 
-          // active !== "like" ? likeDispatch({ type: HANDLE_LIKE }) : null
-          !checkingItem(likedVideos, videoId)
-          ? dispatch({ type: "ADD_TO_LIKED_VIDEOS", payload: videoDetails })
-          : null
+          active !== "like" ? likeDispatch({ type: HANDLE_LIKE }) : null
+          // !checkingItem(likedVideos, videoId)
+          // ? dispatch({ type: "ADD_TO_LIKED_VIDEOS", payload: videoDetails })
+          // : null
         }
         // kisi or treeke se krte h kya??
       class="fa fa-thumbs-up"></i>
